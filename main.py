@@ -25,7 +25,7 @@ class Timeout:
 
     async def __aenter__(self):
         if self._state != _State.init:
-            raise RuntimeError(f"invalid state: {self._state.value}")
+            raise RuntimeError(f"invalid state: {self._state}")
         self._state = _State.enter
         return self
     
