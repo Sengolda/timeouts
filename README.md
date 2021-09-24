@@ -18,7 +18,6 @@ async def long_running_task():
         try:
             await asyncio.sleep(10)
         except asyncio.CancelledError:
-            canceled_raised = True
             print("The task timed out.")
 
 async def main():
