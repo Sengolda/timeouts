@@ -19,7 +19,7 @@ async def long_running_task():
             await asyncio.sleep(10)
         except asyncio.CancelledError:
             canceled_raised = True
-            print(canceled_raised)
+            print("The task timed out.")
 
 async def main():
     async with Timeout(3.0, loop=loop): # If the function executes within 3 seconds, nothing will happen and function will run as normal, if not. it will raise asyncio.CancelledError
