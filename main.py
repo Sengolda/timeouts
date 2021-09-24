@@ -6,8 +6,8 @@ import sys
 class _State(enum.Enum): # The current state.
     init = 0
     enter = 1
-    timeout = 3
-    exit = 4
+    timeout = 2
+    exit = 3
 
 class Timeout:
     def __init__(
